@@ -1,11 +1,11 @@
 Summary:	Audio/MIDI multi-track sequencer
 Name:		qtractor
-Version:	0.5.5
-Release:	3
+Version:	0.5.6
+Release:	2
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/qtractor/%{name}-%{version}.tar.gz
-# Source0-md5:	ec3ad0f427a9e629fb0c42d10b4c2259
+# Source0-md5:	4d018afcdcb28367dde0bffa88b3bc74
 Patch0:		%{name}-desktop.patch
 URL:		http://qtractor.sourceforge.net/
 BuildRequires:	QtGui-devel
@@ -26,8 +26,10 @@ BuildRequires:	qt-linguist
 BuildRequires:	qt-qmake
 BuildRequires:	rubberband-devel
 BuildRequires:	vst-plugins-sdk
-Requires(post,postun):	hicolor-icon-theme
 Requires(post,postun):	/usr/bin/gtk-update-icon-cache
+Requires(post,postun):	desktop-file-utils
+Requires(post,postun):	hicolor-icon-theme
+Requires(post,postun):	shared-mime-info
 # for lv2 plugins
 Requires:	libsuil-gui-support
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -65,14 +67,20 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 %update_icon_cache hicolor
+%update_desktop_database
+%update_mime_database
 
 %postun
 %update_icon_cache hicolor
+%update_desktop_database
+%update_mime_database
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/*
+%{_datadir}/mime/packages/qtractor.xml
 %{_desktopdir}/*.desktop
 %{_iconsdir}/hicolor/*/apps/*.png
+%{_iconsdir}/hicolor/*/mimetypes/*.png
 

@@ -1,7 +1,7 @@
-diff -aurN qtractor-0.4.6.orig/src/qtractor.desktop.in qtractor-0.4.6/src/qtractor.desktop.in
---- qtractor-0.4.6.orig/src/qtractor.desktop.in	2010-06-06 13:46:17.000000000 +0200
-+++ qtractor-0.4.6/src/qtractor.desktop.in	2010-06-06 13:47:22.000000000 +0200
-@@ -1,11 +1,9 @@
+diff -aurN qtractor-0.5.6.orig/src/qtractor.desktop.in qtractor-0.5.6/src/qtractor.desktop.in
+--- qtractor-0.5.6.orig/src/qtractor.desktop.in	2012-10-01 16:33:46.652832048 +0200
++++ qtractor-0.5.6/src/qtractor.desktop.in	2012-10-01 16:34:40.295801583 +0200
+@@ -1,12 +1,11 @@
  [Desktop Entry]
  Name=@PACKAGE_NAME@
 -Version=1.0
@@ -12,6 +12,8 @@ diff -aurN qtractor-0.4.6.orig/src/qtractor.desktop.in qtractor-0.4.6/src/qtract
  Icon=qtractor
 -Categories=Audio;AudioVideo;Midi;Sequencer;X-Multitrack;X-Alsa;X-Jack;Qt;
 +Categories=Qt;Audio;AudioVideo;Midi;Sequencer;
+ MimeType=application/x-qtractor-session;application/x-qtractor-template;application/x-qtractor-archive
  Terminal=false
  Type=Application
 -X-SuSE-translate=true
++
