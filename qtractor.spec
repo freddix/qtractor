@@ -1,7 +1,7 @@
 Summary:	Audio/MIDI multi-track sequencer
 Name:		qtractor
 Version:	0.5.7
-Release:	1
+Release:	3
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/qtractor/%{name}-%{version}.tar.gz
