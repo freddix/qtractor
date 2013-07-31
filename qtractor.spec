@@ -1,11 +1,11 @@
 Summary:	Audio/MIDI multi-track sequencer
 Name:		qtractor
-Version:	0.5.9
+Version:	0.5.10
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/qtractor/%{name}-%{version}.tar.gz
-# Source0-md5:	92e18a45e8a378761119440eb677a908
+# Source0-md5:	54a9c2b4eb0f65e44bdc27c91849a341
 Patch0:		%{name}-desktop.patch
 URL:		http://qtractor.sourceforge.net/
 BuildRequires:	QtGui-devel
@@ -82,5 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/mime/packages/qtractor.xml
 %{_desktopdir}/*.desktop
 %{_iconsdir}/hicolor/*/apps/*.png
+%{_iconsdir}/hicolor/*/apps/*.svgz
 %{_iconsdir}/hicolor/*/mimetypes/*.png
+%{_iconsdir}/hicolor/*/mimetypes/*.svgz
 
