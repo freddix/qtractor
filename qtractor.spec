@@ -1,11 +1,11 @@
 Summary:	Audio/MIDI multi-track sequencer
 Name:		qtractor
-Version:	0.5.12
-Release:	2
+Version:	0.6.0
+Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/qtractor/%{name}-%{version}.tar.gz
-# Source0-md5:	f26691f70c4cd4b89bc4369a579f291f
+# Source0-md5:	95eeb8a1f6d08645d8f9f606f0c04f15
 Patch0:		%{name}-desktop.patch
 URL:		http://qtractor.sourceforge.net/
 BuildRequires:	QtGui-devel
@@ -48,9 +48,6 @@ sed -i "s|@localedir@|%{_datadir}/qt/translations|" Makefile.in
 %{__autoheader}
 %{__autoconf}
 %configure \
-	--disable-slv2	\
-	--enable-lilv	\
-	--enable-suil	\
 	--with-vst=%{_includedir}/vst
 %{__make}
 
