@@ -1,17 +1,17 @@
 Summary:	Audio/MIDI multi-track sequencer
 Name:		qtractor
-Version:	0.6.2
+Version:	0.6.3
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/qtractor/%{name}-%{version}.tar.gz
-# Source0-md5:	68d91105fbee6d711bc317f1fc6164d0
+# Source0-md5:	caf1b4ddd924ac81b58bfd11ecd1e805
 Patch0:		%{name}-desktop.patch
 URL:		http://qtractor.sourceforge.net/
 BuildRequires:	QtGui-devel
 BuildRequires:	QtXml-devel
 BuildRequires:	alsa-lib-devel
-BuildRequires:	dssi
+BuildRequires:	dssi-devel
 BuildRequires:	gtk+-devel
 BuildRequires:	jack-audio-connection-kit-devel
 BuildRequires:	ladspa-devel
